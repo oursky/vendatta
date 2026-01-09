@@ -25,15 +25,16 @@ Automatically registers skills from shared templates as MCP tools based on agent
 ```
 .oursky/
 ├── config.yaml                 # Main configuration with agent list
-├── templates/                  # Shared templates (open standards)
+├── shared/                     # Shared capabilities (open standards)
 │   ├── skills/                 # agentskills.io compliant
 │   ├── commands/               # Standardized command definitions
 │   └── rules/                  # agents.md compliant
-└── agents/                     # Agent-specific templates
-    ├── cursor/
-    ├── opencode/
-    ├── claude-desktop/
-    └── claude-code/
+├── agents/                     # Agent-specific config templates
+│   ├── cursor/mcp.json.tpl
+│   ├── opencode/opencode.json.tpl
+│   ├── claude-desktop/claude_desktop_config.json.tpl
+│   └── claude-code/claude_code_config.json.tpl
+└── worktrees/                  # Generated worktrees (gitignored)
 ```
 
 ### **Generation Process**
